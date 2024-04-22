@@ -9,7 +9,7 @@ function Note(props) {
         <h1>{props.title}</h1>
         <p>{props.content}</p>
         <button className="del">DELETE</button>
-        <Link className="upd" to={`/read-note/${user._id}`}>UPDATE</Link>
+        <Link className="upd" to="/update-note">UPDATE</Link>
       </div>
     </div>
   );
