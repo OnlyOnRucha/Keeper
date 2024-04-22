@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const CreateArea = () => {
   const [note, setNote] = useState({
@@ -48,7 +48,7 @@ const CreateArea = () => {
           onChange={handleChange}
           value={note.content}
           placeholder="Take a note..."
-          rows="3"
+          // rows="3"
         />
         <button type="submit">Add</button>
       </form>
