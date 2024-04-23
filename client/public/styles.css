@@ -52,6 +52,7 @@ footer p {
   box-shadow: 0 2px 5px #ccc;
   padding: 10px;
   width: 240px;
+  height: 160px;
   margin: 16px;
   margin-top: 25px;
   float: left;
@@ -67,7 +68,7 @@ footer p {
   word-wrap: break-word;
 }
 
-.note button {
+/* .note button {
   position: relative;
   margin-right: 10px;
   color: #f5ba13;
@@ -80,19 +81,32 @@ footer p {
   box-shadow: 0 2px 5px #ccc;
   margin-top: 17px;
   margin-bottom: 8px;
-}
+} */
 
 .del{
+  position: relative;
+  margin-right: 10px;
+  color: #f5ba13;
+  border: none;
+  border-radius: 7px;
+  padding: 5px;
+  height: 36px;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 2px 5px #ccc;
+  margin-top: 17px;
+  margin-bottom: 8px;
   float: right;
 }
 
 .upd{
   font-weight:500;
-  padding-top: 7px;
+  /* padding-top: 7px; */
   text-decoration: none;
   position: relative;
-  margin-right: 10px;
-  margin-top: 17px;
+  margin-bottom: 5px;
+  /* margin-right: 10px;
+  margin-top: 17px; */
   color: white;
   background: #f5ba13;
   border: none;
@@ -102,6 +116,23 @@ footer p {
   cursor: pointer;
   outline: none;
   float: left;
+  font-family: "Montserrat", sans-serif;
+  box-shadow: 0 2px 5px #ccc;
+}
+
+.addnote{
+  text-decoration: none;
+  width:fit-content;
+  margin-top: 20px;
+  display: block;
+  color: white;
+  background: #f5ba13;
+  border: none;
+  border-radius: 7px;
+  margin-bottom:8px;
+  padding: 8px;
+  cursor: pointer;
+  outline: none;
   font-family: "Montserrat", sans-serif;
   box-shadow: 0 2px 5px #ccc;
 }

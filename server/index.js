@@ -5,17 +5,9 @@ import UserModel from './models/users.js';
 
 const app = express(); 
 app.use(cors());
-app.use(express.json());
+app.use(express.json()); //inbuilt express middleware to access our json data in form of an object
 
-app.get('/', async (req, res) => {
-    try {
-        const notes = await UserModel.find();
-        res.json(notes);
-    } catch (error) {
-        res.status(500).json({ message: error.message });
-    }
-});
-
+//creating a new note using the POST route
 app.post("/", async (req, res) => {
     try {
         const newUser = new UserModel(req.body);
@@ -25,6 +17,44 @@ app.post("/", async (req, res) => {
         res.status(400).json({ message: error.message });
     }
 });
+
+//reading all notes using the GET route
+app.get('/', async (req, res) => {
+    try {
+        const notes = await UserModel.find();    //find() used to read data from your database UserModel, if you specify id inside of the find method, you can retrieve one single record/note
+        res.status(201).json(notes);
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+});
+
+//delete a task
+app.delete('/:id', async (req, res) => {
+    try {
+        const {id} = req.params;
+        await UserModel.findByIdAndDelete(id)
+        res.status(204).end();
+        //res.status(204).json(res);
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+})
+
+//get data
+app.get('/getData/:id', (req, res) => {
+    const {id} = req.params;
+    UserModel.findById(id)
+    .then(users => res.json(users))
+    .catch(err => res.json(err))
+})
+
+//update a note
+app.put('/update-note/:id',  async (req, res) => {
+    const {id} = req.params;
+    await UserModel.findByIdAndUpdate({_id:id}, {title: req.body.title, content: req.body.content})
+    .then(users => res.status(201).json(users))
+    .catch(err => res.status(500).json({message: err.message}))
+})
 
 mongoose.connect("mongodb://localhost:27017/crud", { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
