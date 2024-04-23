@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from "react-router-dom";
 import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 
@@ -30,7 +29,6 @@ const Update = () => {
     }
   };
 
-
   return (
     <div>
         <h2 className="heading">Update Note</h2>
@@ -49,7 +47,7 @@ const Update = () => {
               placeholder="Take a note..." 
               rows="3" 
             />
-            <button type='submit' className="addbtn" to="/read-note">Update</button>
+            <button type='submit' className="updbtn" to="/read-note">UPDATE</button>
             
         </form>
     </div>
@@ -57,5 +55,3 @@ const Update = () => {
 }
 
 export default Update;
-
-

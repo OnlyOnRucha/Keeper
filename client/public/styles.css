@@ -56,6 +56,7 @@ footer p {
   margin: 16px;
   margin-top: 25px;
   float: left;
+  position: relative;
 }
 .note h1 {
   font-size: 1.1em;
@@ -84,8 +85,7 @@ footer p {
 } */
 
 .del{
-  position: relative;
-  margin-right: 10px;
+  position: absolute;
   color: #f5ba13;
   border: none;
   border-radius: 7px;
@@ -94,30 +94,54 @@ footer p {
   cursor: pointer;
   outline: none;
   box-shadow: 0 2px 5px #ccc;
-  margin-top: 17px;
-  margin-bottom: 8px;
-  float: right;
+  bottom: 16px;
+  right: 15px;
+  /* margin-right: 10px; */
+  /* margin-top: 17px;
+  margin-bottom: 8px; */
+  /* float: right; */
 }
 
 .upd{
   font-weight:500;
-  /* padding-top: 7px; */
   text-decoration: none;
-  position: relative;
-  margin-bottom: 5px;
-  /* margin-right: 10px;
-  margin-top: 17px; */
+  position: absolute;
   color: white;
   background: #f5ba13;
   border: none;
   border-radius: 7px;
-  margin-bottom:8px;
   padding: 8px;
   cursor: pointer;
   outline: none;
-  float: left;
   font-family: "Montserrat", sans-serif;
   box-shadow: 0 2px 5px #ccc;
+  bottom: 16px;
+  left: 15px;
+  /* float: left; */
+  /* margin-bottom:8px; */
+  /* margin-bottom: 5px; */
+  /* margin-right: 10px;
+  margin-top: 17px; */
+  /* padding-top: 7px; */
+}
+
+.updbtn{
+  width: fit-content;
+  position: absolute;
+  right: 35px;
+  bottom: -18px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  background: #f5ba13;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  text-decoration: none;
+  box-shadow: 2px 5px 2px 5px #ccc;
+  padding: 9px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  outline: none;
 }
 
 .addnote{
