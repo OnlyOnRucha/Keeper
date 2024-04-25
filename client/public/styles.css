@@ -211,3 +211,81 @@ form button {
   cursor: pointer;
   outline: none;
 }
+
+
+
+
+
+
+
+
+
+.containersignup{
+  background-color: #eee;
+}
+
+.signup-form{
+  color: #222;
+  overflow: hidden;
+  margin-left: 75px;
+  margin-top: 27px;
+  margin-right: 75px;
+  padding-left: 34px;
+}
+
+.form-title{
+  line-height: 1.66;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  color: #f5ba13;
+  font-size: 33px;
+  text-align: center;
+}
+
+#register-form{
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  margin: 15px auto 20px auto;
+  color: #222;
+  width: 37%;
+  padding: 15px;
+  padding-top: 23px;
+}
+
+.form-group{
+  border-bottom: solid #2222221a;
+  font-size: 15px;
+  color: #222;
+  /* position: relative; */
+  margin-bottom: 25px;
+  overflow: hidden;
+  }
+
+.form-button{
+  color: #222;
+  overflow: hidden;
+  margin-bottom: 0;
+} 
+
+.form-submit{
+  text-decoration: none;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  background: #f5ba13;
+  color: #fff;
+  border-bottom: none;
+  width: auto;
+  padding: 12px 34px;
+  border-radius: 5px;
+  font-size: 19px;
+  cursor: pointer;
+}
+
+.linktologin{
+  color: #2222227d;
+  padding-bottom: 9px;
+}
+
+.linktologin a{
+  color: #00007660;
+}
