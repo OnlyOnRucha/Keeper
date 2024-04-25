@@ -2,10 +2,44 @@ import express from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
 import UserModel from './models/users.js';
+import SignUpModel from './models/sign.js';
+
 
 const app = express(); 
 app.use(cors());
 app.use(express.json()); //inbuilt express middleware to access our json data in form of an object
+
+
+//sign-up route
+app.post("/sign-up", async (req, res) => {
+    try {
+        const newUser = await SignUpModel.create(req.body);
+        res.status(201).json(newUser);
+    } catch (error) {
+        res.status(400).json({ message: error.message });
+    }
+});
+
+//log in route
+app.post("/log-in", async (req, res) => {
+    try {
+        const {email, password} = await (req.body);
+        SignUpModel.findOne({email: email})
+        .then(user => {
+            if(user) {
+                if(user.password === password){
+                res.json("Success!!")
+                } else {
+                res.json("The password is incorrect.")
+                }
+            } else {
+                res.json("No record found, register now!")
+            }
+        })
+    } catch (error) {
+        res.status(400).json({ message: error.message });
+    }
+});
 
 //creating a new note using the POST route
 app.post("/", async (req, res) => {

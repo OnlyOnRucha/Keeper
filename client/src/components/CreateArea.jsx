@@ -24,7 +24,10 @@ const CreateArea = () => {
 
   return (
     <div className='addnotecontainer'>
-      <Link className="addnote" to="/read-note">Read Notes</Link>
+      <div className='buttonss'>
+        <Link className="addnote" to="/read-note">Read Notes</Link>
+        <Link className="addnote" to="/log-in">Log Out</Link>
+      </div>
       <h2 className="heading">Create Note</h2>
       <form onSubmit={handleSubmit}>
         <input

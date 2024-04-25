@@ -14,7 +14,10 @@ const Read = () => {
 
   return (
     <div>
-    <Link className="addnote" to="/">Add Note</Link>
+      <div className='buttonss'>
+        <Link className="addnote" to="/">Add Note</Link>
+        <Link className="addnote" to="/log-in">Log Out</Link>
+      </div>
       <h2 className="heading">All Notes</h2>
       {notes.map(note => (
         //this call to the <Note /> component displays all notes
